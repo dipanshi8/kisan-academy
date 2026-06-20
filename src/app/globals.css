@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-green-950: #07140d;
+  --color-green-900: #0f2a1a;
+  --color-green-800: #16401f;
+  --color-green-700: #1f5429;
+  --color-green-100: #e8f0e6;
+
+  --color-mustard-600: #b8860b;
+  --color-mustard-500: #d4a017;
+  --color-mustard-400: #e0b32e;
+  --color-mustard-100: #fbf2da;
+
+  --color-cream: #faf8f4;
+  --color-ink: #181d27;
+  --color-success: #1e8e5a;
+
+  --font-display: var(--font-poppins, "Poppins", system-ui, sans-serif);
+  --font-body: var(--font-inter, "Inter", system-ui, sans-serif);
+}
+
+:root {
+  --background: var(--color-cream);
+  --foreground: var(--color-ink);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+/* Checklist dotted divider — syllabus-tick motif */
+.divider-dots {
+  background-image: radial-gradient(circle, var(--color-green-100) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+/* Admit-card style perforation edge */
+.perforated::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 2px dashed rgba(255,255,255,0.35);
+}
+
+.ribbon-tag {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 92% 50%, 100% 100%, 0 100%);
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-green-100);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-mustard-500);
+  border-radius: 8px;
+}
