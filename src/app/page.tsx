@@ -17,7 +17,7 @@ export default function Home() {
       "Coaching institute for TGT Geography, PGT Geography, and competitive exam preparation.",
     url: "https://www.kisanacademy.in",
     telephone: "+91-95699-54032",
-    email: "info@kisanacademy.in",
+    email: "iicsallahabaad@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Near Clock Tower, Rajpur Road",

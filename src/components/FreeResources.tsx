@@ -6,27 +6,33 @@ const RESOURCES = [
     title: "YouTube Videos",
     desc: "Free concept lectures and exam-strategy sessions, updated weekly.",
     action: "Watch Now",
+    href: "https://youtube.com/@kisanacademy-u2n?si=GY7r28DrdE26ITTO",
+    external: true,
     accent: "bg-mustard-500",
     iconClass: "text-green-900",
-    hoverIconAccent: "group-hover:bg-green-900 group-hover:text-mustard-400",
+    hoverIconAccent: "[@media(hover:hover)]:group-hover:bg-green-900 [@media(hover:hover)]:group-hover:text-mustard-400",
   },
   {
     icon: FileDown,
     title: "PDF Notes",
     desc: "Chapter-wise summary notes you can revise anytime, anywhere.",
     action: "Download Notes",
+    href: "#contact",
+    external: false,
     accent: "bg-mustard-500",
     iconClass: "text-green-900",
-    hoverIconAccent: "group-hover:bg-green-900 group-hover:text-mustard-400",
+    hoverIconAccent: "[@media(hover:hover)]:group-hover:bg-green-900 [@media(hover:hover)]:group-hover:text-mustard-400",
   },
   {
     icon: ScrollText,
     title: "PYQ Downloads",
     desc: "Compiled previous year question papers with detailed solutions.",
     action: "Get PYQs",
+    href: "#contact",
+    external: false,
     accent: "bg-mustard-500",
     iconClass: "text-green-900",
-    hoverIconAccent: "group-hover:bg-green-900 group-hover:text-mustard-400",
+    hoverIconAccent: "[@media(hover:hover)]:group-hover:bg-green-900 [@media(hover:hover)]:group-hover:text-mustard-400",
   },
 ];
 
@@ -53,22 +59,25 @@ export default function FreeResources() {
             return (
               <div
                 key={r.title}
-                className="group rounded-xl bg-white p-7 shadow-sm border border-green-100 border-t-4 border-t-mustard-500 hover:bg-mustard-500 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:border-mustard-400 transition-all duration-300"
+                className="group rounded-xl bg-white p-7 shadow-sm border border-green-100 border-t-4 border-t-mustard-500 [@media(hover:hover)]:hover:bg-mustard-500 [@media(hover:hover)]:hover:shadow-xl [@media(hover:hover)]:hover:-translate-y-1 [@media(hover:hover)]:hover:scale-[1.02] [@media(hover:hover)]:hover:border-mustard-400 transition-all duration-300"
               >
                 <div
                   className={`flex h-12 w-12 items-center justify-center rounded-lg ${r.accent} ${r.iconClass} ${r.hoverIconAccent} transition-colors duration-300`}
                 >
                   <Icon size={22} strokeWidth={2} />
                 </div>
-                <h3 className="mt-5 font-display font-bold text-green-900 group-hover:text-green-950 text-lg transition-colors duration-300">
+                <h3 className="mt-5 font-display font-bold text-green-900 [@media(hover:hover)]:group-hover:text-green-950 text-lg transition-colors duration-300">
                   {r.title}
                 </h3>
-                <p className="mt-2 text-sm text-green-800/80 group-hover:text-green-900 leading-relaxed transition-colors duration-300">
+                <p className="mt-2 text-sm text-green-800/80 [@media(hover:hover)]:group-hover:text-green-900 leading-relaxed transition-colors duration-300">
                   {r.desc}
                 </p>
                 <a
-                  href="#contact"
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-mustard-600 group-hover:text-green-900 transition-colors duration-300"
+                  href={r.href}
+                  {...(r.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-mustard-600 [@media(hover:hover)]:group-hover:text-green-900 transition-colors duration-300"
                 >
                   {r.action}
                   <ArrowUpRight size={16} />

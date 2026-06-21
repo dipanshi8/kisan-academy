@@ -60,14 +60,14 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={reason.title}
-                className={`group rounded-xl bg-white/[0.04] border border-white/10 border-l-4 border-l-mustard-500 p-6 hover:bg-mustard-500/10 hover:border-mustard-500 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-xl hover:shadow-mustard-500/20 transition-all duration-300 ${
+                className={`group rounded-xl bg-white/[0.04] border border-white/10 border-l-4 border-l-mustard-500 p-6 [@media(hover:hover)]:hover:bg-mustard-500/10 [@media(hover:hover)]:hover:border-mustard-500 [@media(hover:hover)]:hover:-translate-y-1 [@media(hover:hover)]:hover:scale-[1.02] [@media(hover:hover)]:hover:shadow-xl [@media(hover:hover)]:hover:shadow-mustard-500/20 transition-all duration-300 ${
                   i === 4 ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-mustard-500 text-green-900 shadow-md shadow-mustard-500/40 group-hover:bg-mustard-600 transition-colors duration-300">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-mustard-500 text-green-900 shadow-md shadow-mustard-500/40 [@media(hover:hover)]:group-hover:bg-mustard-600 transition-colors duration-300">
                   <Icon size={22} strokeWidth={2.2} />
                 </div>
-                <h3 className="mt-4 font-display font-semibold text-white text-lg group-hover:text-mustard-400 transition-colors duration-300">
+                <h3 className="mt-4 font-display font-semibold text-white text-lg [@media(hover:hover)]:group-hover:text-mustard-400 transition-colors duration-300">
                   {reason.title}
                 </h3>
                 <p className="mt-2 text-sm text-green-100/75 leading-relaxed">

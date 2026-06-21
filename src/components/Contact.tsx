@@ -54,10 +54,10 @@ export default function Contact() {
                   Email
                 </p>
                 <a
-                  href="mailto:info@kisanacademy.in"
-                  className="mt-1 block text-white font-medium hover:text-mustard-400 transition-colors"
+                  href="mailto:iicsallahabaad@gmail.com"
+                  className="mt-1 block text-white font-medium hover:text-mustard-400 transition-colors break-all"
                 >
-                  info@kisanacademy.in
+                  iicsallahabaad@gmail.com
                 </a>
               </div>
             </div>

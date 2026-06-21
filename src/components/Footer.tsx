@@ -1,10 +1,21 @@
-import { Facebook, Instagram, Youtube, Linkedin, GraduationCap } from "lucide-react";
+import { Facebook, Instagram, Youtube, GraduationCap } from "lucide-react";
 
 const SOCIALS = [
-  { icon: Facebook, label: "Facebook", href: "https://facebook.com" },
-  { icon: Instagram, label: "Instagram", href: "https://instagram.com" },
-  { icon: Youtube, label: "YouTube", href: "https://youtube.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
+  {
+    icon: Facebook,
+    label: "Facebook",
+    href: "https://www.facebook.com/share/1BS1dHtFwU/",
+  },
+  {
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/kisanacademy.1?igsh=cjBzbDE2MGNneTI5",
+  },
+  {
+    icon: Youtube,
+    label: "YouTube",
+    href: "https://youtube.com/@kisanacademy-u2n?si=GY7r28DrdE26ITTO",
+  },
 ];
 
 const QUICK_LINKS = [
@@ -65,8 +76,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@kisanacademy.in" className="hover:text-mustard-400 transition-colors">
-                  info@kisanacademy.in
+                <a
+                  href="mailto:iicsallahabaad@gmail.com"
+                  className="hover:text-mustard-400 transition-colors break-all"
+                >
+                  iicsallahabaad@gmail.com
                 </a>
               </li>
             </ul>

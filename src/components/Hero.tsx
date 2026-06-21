@@ -75,7 +75,9 @@ export default function Hero() {
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="#resources"
+                href="https://youtube.com/@kisanacademy-u2n?si=GY7r28DrdE26ITTO"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md border-2 border-mustard-500 bg-transparent px-7 py-3.5 text-base font-semibold text-white hover:bg-mustard-500/20 transition-colors"
               >
                 <PlayCircle size={20} className="text-mustard-400" />

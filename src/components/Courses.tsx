@@ -114,17 +114,17 @@ export default function Courses() {
             return (
               <div
                 key={course.title}
-                className="group flex flex-col rounded-xl border border-green-100 border-t-4 border-t-mustard-500 bg-white p-6 shadow-sm hover:bg-mustard-500 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:border-mustard-400 transition-all duration-300"
+                className="group flex flex-col rounded-xl border border-green-100 border-t-4 border-t-mustard-500 bg-white p-6 shadow-sm [@media(hover:hover)]:hover:bg-mustard-500 [@media(hover:hover)]:hover:shadow-xl [@media(hover:hover)]:hover:-translate-y-1 [@media(hover:hover)]:hover:scale-[1.02] [@media(hover:hover)]:hover:border-mustard-400 transition-all duration-300"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-mustard-500 text-green-900 group-hover:bg-green-900 group-hover:text-mustard-400 transition-colors duration-300">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-mustard-500 text-green-900 [@media(hover:hover)]:group-hover:bg-green-900 [@media(hover:hover)]:group-hover:text-mustard-400 transition-colors duration-300">
                   <Icon size={24} strokeWidth={2} />
                 </div>
 
-                <h3 className="mt-5 font-display font-bold text-green-900 group-hover:text-green-950 text-xl transition-colors duration-300">
+                <h3 className="mt-5 font-display font-bold text-green-900 [@media(hover:hover)]:group-hover:text-green-950 text-xl transition-colors duration-300">
                   {course.title}
                 </h3>
 
-                <div className="mt-2 flex items-center gap-1.5 text-sm text-mustard-600 group-hover:text-green-900 transition-colors duration-300">
+                <div className="mt-2 flex items-center gap-1.5 text-sm text-mustard-600 [@media(hover:hover)]:group-hover:text-green-900 transition-colors duration-300">
                   <Clock size={15} />
                   <span>{course.duration}</span>
                 </div>
@@ -133,7 +133,7 @@ export default function Courses() {
                   {course.features.map((f) => (
                     <li
                       key={f}
-                      className="flex items-start gap-2 text-sm text-green-800/90 group-hover:text-green-900 transition-colors duration-300"
+                      className="flex items-start gap-2 text-sm text-green-800/90 [@media(hover:hover)]:group-hover:text-green-900 transition-colors duration-300"
                     >
                       <CheckCircle2 size={16} className="text-success mt-0.5 shrink-0" />
                       <span>{f}</span>
@@ -145,7 +145,7 @@ export default function Courses() {
                   href={course.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center justify-center rounded-md bg-mustard-500 hover:bg-mustard-600 group-hover:bg-green-900 px-4 py-2.5 text-sm font-bold text-white group-hover:text-mustard-400 transition-colors duration-300"
+                  className="mt-6 inline-flex items-center justify-center rounded-md bg-mustard-500 hover:bg-mustard-600 [@media(hover:hover)]:group-hover:bg-green-900 px-4 py-2.5 text-sm font-bold text-green-900 [@media(hover:hover)]:group-hover:text-mustard-400 transition-colors duration-300"
                 >
                   Enroll Now
                 </a>
