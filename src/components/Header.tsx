@@ -52,7 +52,7 @@ export default function Header() {
                 Kisan Academy
               </span>
               <span className="text-[11px] text-mustard-400 font-medium tracking-wide">
-                सफलता की पाठशाला
+                Creator Of Future
               </span>
             </span>
           </a>
@@ -72,7 +72,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-md bg-mustard-500 px-5 py-2.5 text-sm font-bold text-white hover:bg-mustard-600 transition-colors shadow-md shadow-mustard-500/50 ring-2 ring-mustard-400"
+              className="inline-flex items-center justify-center rounded-md bg-mustard-500 px-5 py-2.5 text-sm font-bold text-green-900 hover:bg-mustard-600 transition-colors shadow-md shadow-mustard-500/50 ring-2 ring-mustard-400"
             >
               Join Now
             </a>

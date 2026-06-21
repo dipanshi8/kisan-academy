@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="mt-9 flex flex-wrap gap-4">
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 rounded-md bg-mustard-500 px-7 py-3.5 text-base font-bold text-white hover:bg-mustard-600 transition-colors shadow-lg shadow-mustard-500/40 ring-2 ring-mustard-400"
+                className="group inline-flex items-center gap-2 rounded-md bg-mustard-500 px-7 py-3.5 text-base font-bold text-green-900 hover:bg-mustard-600 transition-colors shadow-lg shadow-mustard-500/40 ring-2 ring-mustard-400"
               >
                 Join Now
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
