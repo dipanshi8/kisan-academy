@@ -1,19 +1,23 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-green-950: #003800;
-  --color-green-900: #006400;
-  --color-green-800: #007800;
-  --color-green-700: #008F00;
-  --color-green-100: #D9EDD9;
+  --color-navy-950: #051428;
+  --color-navy-900: #071B3A;
+  --color-navy-800: #0B2347;
+  --color-navy-700: #0D2D55;
+  --color-navy-100: #E8EDF4;
 
-  --color-mustard-600: #8A8200;
-  --color-mustard-500: #FFF200;
-  --color-mustard-400: #FFFF99;
-  --color-mustard-100: #FFFDE6;
+  --color-gold-600: #D9A514;
+  --color-gold-500: #F7C928;
+  --color-gold-400: #FBD85A;
+  --color-gold-100: #FDF4D4;
 
-  --color-cream: #faf8f4;
-  --color-ink: #181d27;
+  --color-cream: #F8F3E8;
+  --color-card: #FFFDF8;
+  --color-ink: #101828;
+  --color-muted: #475467;
+  --color-border-light: #E7DCC8;
+
   --color-success: #1e8e5a;
 
   --font-display: var(--font-poppins, "Poppins", system-ui, sans-serif);
@@ -41,7 +45,7 @@ h1, h2, h3, h4, .font-display {
 
 /* Checklist dotted divider — syllabus-tick motif */
 .divider-dots {
-  background-image: radial-gradient(circle, var(--color-green-100) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(circle, var(--color-navy-100) 1.5px, transparent 1.5px);
   background-size: 14px 14px;
 }
 
@@ -82,9 +86,9 @@ h1, h2, h3, h4, .font-display {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-green-100);
+  background: var(--color-border-light);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-mustard-500);
+  background: var(--color-gold-500);
   border-radius: 8px;
 }

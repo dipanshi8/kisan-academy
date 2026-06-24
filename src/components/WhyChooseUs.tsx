@@ -30,25 +30,25 @@ const REASONS = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="about" className="bg-green-900 py-20 lg:py-28 relative overflow-hidden">
+    <section id="about" className="bg-navy-900 py-20 lg:py-28 relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.2]"
         aria-hidden="true"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(212,160,23,0.55) 1.5px, transparent 1.5px)",
+            "radial-gradient(circle, rgba(247,201,40,0.55) 1.5px, transparent 1.5px)",
           backgroundSize: "14px 14px",
         }}
       />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <span className="text-mustard-400 font-semibold text-sm uppercase tracking-widest">
+          <span className="text-gold-400 font-semibold text-sm uppercase tracking-widest">
             Why Kisan Academy
           </span>
           <h2 className="mt-3 font-display font-bold text-white text-3xl sm:text-4xl">
             Why Choose Us
           </h2>
-          <p className="mt-4 text-green-100/80 text-base sm:text-lg">
+          <p className="mt-4 text-white/80 text-base sm:text-lg">
             We built our teaching method around one question: what actually
             helps a student clear the exam.
           </p>
@@ -60,17 +60,17 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={reason.title}
-                className={`group rounded-xl bg-white/[0.04] border border-white/10 border-l-4 border-l-mustard-500 p-6 [@media(hover:hover)]:hover:bg-mustard-500/10 [@media(hover:hover)]:hover:border-mustard-500 [@media(hover:hover)]:hover:-translate-y-1 [@media(hover:hover)]:hover:scale-[1.02] [@media(hover:hover)]:hover:shadow-xl [@media(hover:hover)]:hover:shadow-mustard-500/20 transition-all duration-300 ${
+                className={`group rounded-xl bg-white/[0.04] border border-white/10 border-l-4 border-l-gold-500 p-6 [@media(hover:hover)]:hover:bg-gold-500/10 [@media(hover:hover)]:hover:border-gold-500 [@media(hover:hover)]:hover:-translate-y-1 [@media(hover:hover)]:hover:scale-[1.02] [@media(hover:hover)]:hover:shadow-xl [@media(hover:hover)]:hover:shadow-gold-500/20 transition-all duration-300 ${
                   i === 4 ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-mustard-500 text-green-900 shadow-md shadow-mustard-500/40 [@media(hover:hover)]:group-hover:bg-mustard-600 transition-colors duration-300">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-500 text-navy-900 shadow-md shadow-gold-500/40 [@media(hover:hover)]:group-hover:bg-gold-600 transition-colors duration-300">
                   <Icon size={22} strokeWidth={2.2} />
                 </div>
-                <h3 className="mt-4 font-display font-semibold text-white text-lg [@media(hover:hover)]:group-hover:text-mustard-400 transition-colors duration-300">
+                <h3 className="mt-4 font-display font-semibold text-white text-lg [@media(hover:hover)]:group-hover:text-gold-400 transition-colors duration-300">
                   {reason.title}
                 </h3>
-                <p className="mt-2 text-sm text-green-100/75 leading-relaxed">
+                <p className="mt-2 text-sm text-white/75 leading-relaxed">
                   {reason.desc}
                 </p>
               </div>
