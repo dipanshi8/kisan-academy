@@ -73,6 +73,11 @@ h1, h2, h3, h4, .font-display {
   animation: fade-up 0.6s ease-out both;
 }
 
+.hero-photo-frame {
+  -webkit-mask-image: radial-gradient(ellipse 92% 88% at 34% 32%, #000 54%, transparent 100%);
+  mask-image: radial-gradient(ellipse 92% 88% at 34% 32%, #000 54%, transparent 100%);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
