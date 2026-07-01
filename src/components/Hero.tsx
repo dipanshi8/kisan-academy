@@ -282,11 +282,9 @@ export default function Hero() {
       className="
         relative isolate overflow-hidden
         bg-cream
-        pt-28 pb-16
-        sm:pb-20
+        pt-28 pb-16 sm:pt-28 sm:pb-20
         lg:pt-40 lg:pb-28
-        min-h-[calc(100vh-0px)]
-        lg:min-h-[calc(100vh-72px)]
+        min-h-screen lg:min-h-[calc(100vh-72px)]
       "
     >
 
@@ -350,15 +348,18 @@ export default function Hero() {
       </div>
 
       {/* ── Wave divider — section-level, full section height ──
-          Single element. Left position and width are set via inline style
-          to keep the calc consistent across breakpoints.
-          At md: 7rem wide, starts at calc(50% + 1rem - 7rem) = calc(50% - 6rem)
-          At lg: 9rem wide, starts at calc(50% + 1rem - 9rem) = calc(50% - 8rem)
-          The right edge of the divider always aligns with the navy panel's left edge.
+          Width changes per breakpoint; left position is calculated as
+          (50% + gap-half - width) so the RIGHT edge always meets the navy panel.
+          md:  width=7rem,  gap-half≈1rem  → left = 50% - 6rem
+          lg:  width=9rem,  gap-half=1rem  → left = 50% - 8rem
+          xl:  width=11rem, gap-half=1rem  → left = 50% - 10rem
       ── */}
       <div
-        className="pointer-events-none absolute inset-y-0 z-[1] hidden md:block w-[7rem] lg:w-[9rem] xl:w-[11rem]"
-        style={{ left: "calc(50% - 6rem)" }}
+        className="
+          pointer-events-none absolute inset-y-0 z-[1] hidden md:block
+          w-[7rem] lg:w-[9rem] xl:w-[11rem]
+          left-[calc(50%-6rem)] lg:left-[calc(50%-8rem)] xl:left-[calc(50%-10rem)]
+        "
         aria-hidden="true"
       >
         <HeroWaveDivider className="h-full w-full" />
@@ -406,7 +407,7 @@ export default function Hero() {
               md:col-span-6
               md:flex md:flex-col md:justify-center
               md:pr-6 lg:pr-10
-              py-8 md:py-16 lg:py-20
+              pt-8 pb-12 md:py-16 lg:py-20
             "
           >
             {/* Ribbon */}
@@ -472,7 +473,7 @@ export default function Hero() {
                   whileHover={{ y: -2, scale: 1.03, transition: { type: "spring", stiffness: 400, damping: 22 } }}
                   className="group flex items-center gap-2 rounded-full bg-card border border-border-light px-3.5 py-1.5 text-[13px] font-semibold text-navy-900 shadow-sm cursor-pointer select-none transition-all duration-200 hover:bg-gold-500/10 hover:shadow-md hover:shadow-gold-500/10 hover:border-gold-500/40 hover:text-navy-800"
                 >
-                  <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-gold-500 text-navy-900 shrink-0 transition-transform duration-250 group-hover:rotate-[15deg]">
+                  <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-gold-500 text-navy-900 shrink-0 transition-transform duration-300 group-hover:rotate-[15deg]">
                     <Icon size={12} strokeWidth={2.5} />
                   </span>
                   {label}
@@ -509,15 +510,11 @@ export default function Hero() {
           {/* ── RIGHT — Result Card ──────────────────────────────────────
               Plain grid column — no positioning, no isolate.
               Navy background comes from section-level panel.
-              Card is pulled slightly left toward the divider via pl-4 to
-              optically connect with the reading flow from the left column.
+              md:pl-4/lg:pl-6 pulls card slightly toward divider for visual flow.
           ─────────────────────────────────────────────────────────────── */}
-          <div className="md:col-span-6 md:col-start-7 flex justify-center items-center md:pl-4 lg:pl-6">
+          <div className="md:col-span-6 md:col-start-7 flex justify-center md:justify-start items-center md:pl-4 lg:pl-6">
 
-            {/* Result Card wrapper
-                Larger card: max-w increased ~10% across all breakpoints.
-                Pulled toward divider via left-leaning justify.
-                Vertical padding gives the card breathing room within the section. */}
+            {/* Result Card wrapper — ~10% larger than previous, left-aligned on md+ */}
             <motion.div
               ref={cardRef}
               variants={cardVariants}
@@ -525,11 +522,10 @@ export default function Hero() {
               animate={animate(cardInView)}
               className="
                 relative w-full
-                max-w-[360px] sm:max-w-[400px] md:max-w-[340px] lg:max-w-[400px] xl:max-w-[420px]
-                py-10 pb-16 sm:pb-14
+                max-w-[360px] sm:max-w-[400px] md:max-w-[350px] lg:max-w-[400px] xl:max-w-[420px]
+                pt-8 pb-16 sm:pb-14
                 md:py-14 md:pb-16
                 lg:py-16 lg:pb-20
-                mx-auto md:mx-0
               "
             >
               {/* Ambient glow — stronger, centered behind card */}
